@@ -18,3 +18,17 @@ spring:
   mvc:
     format:
       date-time: iso
+      date: iso
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  mail:
+    default-encoding: UTF-8
+    host: ${emailHost}
+    username: ${emailUsername}
+    password: ${emailPassword}
+    port: 465
+    protocol: smtps
+    properties.mail.debug: true
+

@@ -1,0 +1,13 @@
+spring:
+  mvc:
+    format:
+      date-time: iso
+  mail:
+    default-encoding: UTF-8
+    host: ${emailHost}
+    username: ${emailUsername}
+    password: ${emailPassword}
+    port: 465
+    protocol: smtps
+    properties.mail.debug: true
+

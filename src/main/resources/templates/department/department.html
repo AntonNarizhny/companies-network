@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${department.name}">Department</title>
+</head>
+<body>
+    <form th:method="PUT" th:action="@{/departments/{departmentId}(departmentId=${department.id})}">
+        <label for="name">Название:
+            <input id="name" type="text" name="name" th:value="${department.name}">
+        </label><br>
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

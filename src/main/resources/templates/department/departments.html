@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Отделы</title>
+</head>
+<body>
+    <div th:each="department : ${departments}">
+        <div th:text="${department.name}">Department</div>
+        <a th:href="@{/departments/{departmentId}(departmentId=${department.id})}">Изменить</a>
+        <form th:method="DELETE" th:action="@{/departments/{departmentId}(departmentId=${department.id})}">
+            <button>Удалить</button>
+        </form>
+    </div>
+</body>
+</html>

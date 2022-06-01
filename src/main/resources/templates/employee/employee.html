@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="|${employee.firstname} ${employee.lastname}|">Employee</title>
+</head>
+<body>
+    <div th:object="${employee}">
+        <p th:text="|*{firstname} *{lastname}|">Fullname</p><br>
+        <div th:text="*{activated == true} ? 'Активирован' : 'Не активирован'">isActivated</div><br>
+        <span th:text="*{email}">Email</span><br>
+        <span th:text="*{phoneNumber}">PhoneNumber</span><br>
+        <span th:text="*{birthDate}">BirthDate</span><br>
+        <span th:text="*{lastVisit}">LastVisit</span><br>
+        <span th:text="*{salary}">Salary</span><br>
+    </div>
+</body>
+</html>

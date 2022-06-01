@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www/thymeleaf.org">
+<head>
+    <title th:remove="all">Template for Activate HTML email</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <p>
+        Здравствуйте, <span th:text="${fullName}">Firstname and Lastname</span>
+    </p>
+    <p>
+        Вы были зарегистрированы в системе <b>Companies</b> <span th:text="${registrationDate}">27-05-2022</span>
+        с использованием почты <span th:text="${email}">Email</span>
+    </p>
+    <p>
+        Посетите следующую ссылку <span th:text="${link}">Activation Link</span>, чтобы завершить регистрацию.<br>
+        Вам будет выслан пароль для входа в аккаунт.
+    </p>
+    <p>
+        Если вы не знаете почему вам пришло это письмо, то не нужно ничего делать.
+    </p>
+    <p>
+        С уважением,<br> Служба технической поддержки учетных записей Companies.
+    </p>
+</body>
+</html>
